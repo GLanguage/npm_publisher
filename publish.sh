@@ -8,8 +8,13 @@ echo 'Publish version: '
 read VERSION
 echo 'Current branch: '
 read BRANCH
-echo 'Commit Description: '
+echo "Commit Description: (v$VERSION) "
 read DESC
+def=''
+if [ $DESC == $def ] # Default
+then
+	DESC="v$VERSION"
+fi
 
 # Update package.json
 if [ $OS == Darwin ] # Mac

@@ -37,3 +37,5 @@ The script will do:
 3. Change your current branch to `master` and delete the previous branch
 4. Push the local `master` branch to the `master` branch in the remote repo `origin`
 
+**Notice:** If commit description is not given (nothing entered) , then the default description will be `v<version_number>`. 
+
