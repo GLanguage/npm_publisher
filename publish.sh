@@ -19,9 +19,9 @@ fi
 # Update package.json
 if [ $OS == Darwin ] # Mac
 then
-	sed -i "" "s/\"version\": \".\",/\"version\": \"$VERSION\",/" package.json
+	sed -i "" "s/(\"|')version\\1: (\"|').\\2,/\\1version\\1: \\2$VERSION\\2,/" package.json
 else # Linux
-	sed -i "s/\"version\": \".\",/\"version\": \"$VERSION\",/" package.json
+	sed -i "s/(\"|')version\\1: (\"|').\\2,/\\1version\\1: \\2$VERSION\\2,/" package.json
 fi
 
 # npm publish
